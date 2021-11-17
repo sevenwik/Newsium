@@ -1,0 +1,28 @@
+{
+  "name": "newsium",
+  "version": "1.0.0",
+  "description": "One stop place for news, books, movies information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevenwik/Newsium.git"
+  },
+  "keywords": [
+    "news"
+  ],
+  "author": "Sathwik Ch",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sevenwik/Newsium/issues"
+  },
+  "homepage": "https://github.com/sevenwik/Newsium#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "natives": "^1.1.6",
+    "node-fetch": "^3.0.0"
+  }
+}
