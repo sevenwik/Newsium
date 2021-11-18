@@ -1,6 +1,6 @@
 {
   "name": "newsium",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One stop place for news, books, movies information",
   "main": "index.js",
   "scripts": {
