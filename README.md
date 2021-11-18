@@ -19,15 +19,17 @@ npm install newsium
 import news from 'newsium'
 ~~~~
 
-* `news.getArchiveInfo("month","year")` returns an array of NYT articles for a given **month** and **year**, going back to 1851.
+3. Get an api key from https://developer.nytimes.com/get-started
 
-* `news.getArticleInfo("query")` returns articles for a given **query** e.g. for **query** we can give *election*, *cricket*, *meta* etc. 
+* `news.getArchiveInfo("month","year","your-api-key")` returns an array of NYT articles for a given **month** and **year**, going back to 1851.
 
-* `news.getTopStories("topic")` returns an array of top articles currently on the specified **topic**. The possible **topic** values are: arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, and world.
+* `news.getArticleInfo("query","your-api-key")` returns articles for a given **query** e.g. for **query** we can give *election*, *cricket*, *meta* etc. 
 
-* `news.getMostPopular("shared via","popular in the last day")` provides service for getting the most popular articles on NYTimes.com based on emails or views. Example: 
+* `news.getTopStories("topic","your-api-key")` returns an array of top articles currently on the specified **topic**. The possible **topic** values are: arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, and world.
 
-  *  `news.getMostPopular("emailed","1")`->Get most emailed articles for the last day.
-  *  `news.getMostPopular("viewed","1")`->Get most viewed articles for the last seven days.
+* `news.getMostPopular("shared via","popular in the last day","your-api-key")` provides service for getting the most popular articles on NYTimes.com based on emails or views. Example: 
+
+  *  `news.getMostPopular("emailed","1","your-api-key")`->Get most emailed articles for the last day.
+  *  `news.getMostPopular("viewed","1","your-api-key")`->Get most viewed articles for the last seven days.
 
 > </> with ❤️ by Sathwik 
