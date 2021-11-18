@@ -8,12 +8,12 @@ function getInfo(){
 	})
 }
 
-getInfo.getArchiveInfo = ((year, month) => {
+getInfo.getArchiveInfo = ((year, month, apiKey) => {
     return new Promise((done, err) => {
         if(typeof year === 'undefined' && typeof month === 'undefined' ) {
             err('Provide both year and month')
         } else {
-            let apiKey = 'ZnqEsIALud8ejdd5wcZWAZxdlpFjBhnT'
+            
             axios(`https://api.nytimes.com/svc/archive/v1/${year}/${month}.json?api-key=${apiKey}`,{
                 method: "GET"
             })
@@ -29,12 +29,11 @@ getInfo.getArchiveInfo = ((year, month) => {
         }
     })
 })
-getInfo.getArticleInfo = ((query) => {
+getInfo.getArticleInfo = ((query,apiKey) => {
     return new Promise((done, err) => {
         if(typeof query === 'undefined') {
             err('Provide query to fetch articles related to that')
         } else {
-            let apiKey = 'ZnqEsIALud8ejdd5wcZWAZxdlpFjBhnT'
             axios(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${apiKey}`,{
                 method: "GET"
             })
@@ -50,12 +49,11 @@ getInfo.getArticleInfo = ((query) => {
         }
     })
 })
-getInfo.getTopStories = ((topic) => {
+getInfo.getTopStories = ((topic,apiKey) => {
     return new Promise((done, err) => {
         if(typeof topic === 'undefined') {
             err('Provide a topic to fetch top stories related to that')
         } else {
-            let apiKey = 'ZnqEsIALud8ejdd5wcZWAZxdlpFjBhnT'
             axios(`https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=${apiKey}`,{
                 method: "GET"
             })
@@ -71,12 +69,11 @@ getInfo.getTopStories = ((topic) => {
         }
     })
 })
-getInfo.getMostPopular = ((type,days) => {
+getInfo.getMostPopular = ((type,days,apiKey) => {
     return new Promise((done, err) => {
         if(typeof type === 'undefined' && typeof days === 'undefined') {
             err('Provide a topic to fetch top stories related to that')
         } else {
-            let apiKey = 'ZnqEsIALud8ejdd5wcZWAZxdlpFjBhnT'
             axios(`https://api.nytimes.com/svc/mostpopular/v2/${type}/${days}.json?api-key=${apiKey}`,{
                 method: "GET"
             })
